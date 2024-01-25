@@ -1,4 +1,5 @@
 @import url('global.css');
+@import url('scrollbar.css');
 
 header {
     display: flex;
@@ -135,9 +136,13 @@ main .img-profile{
     width: 100%;
 }
 
+:is(.img-profile, .quem-sou-eu img ){
+    box-shadow: 1px 1px 1px var(--cyan1);
+}
+
 /* Main seção experiencias */
 
-.experiencias{
+:is(.experiencias, .meus-projetos){
   background-color: var(--dark2);
   display: flex;
   flex-direction: column;
@@ -170,4 +175,68 @@ main .img-profile{
 .experiencias ul li:hover{
     color: var(--dark5);
     cursor: default;
+}
+
+.quem-sou-eu{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+}
+
+.quem-sou-eu > div{
+    display: flex;
+    gap: 4rem;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+.quem-sou-eu > div img{
+    width: 200px;
+    border-radius: 10px;
+}
+
+.quem-sou-eu > div p{
+    width: 600px;
+    color: var(--white);
+    text-align: justify;
+}
+/* My projects */
+
+#list-projetos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    padding: 2rem;
+    
+}
+
+#list-projetos a{
+    color: var(--dark3);
+    text-decoration: none;
+    transition: all .3s;
+    
+}
+
+#list-projetos a:hover{
+    color: var(--dark5);
+    cursor: default;
+    cursor: pointer;
+}
+
+
+footer{
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+}
+
+footer > div{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
 }
